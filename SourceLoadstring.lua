@@ -14,9 +14,6 @@ else
     game:GetService('StarterGui'):SetCore("DevConsoleVisible", true)
 end
 
-    
-
-
 --[] License
 if not _G.License then
     error("The license variable is missing!")
