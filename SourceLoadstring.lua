@@ -61,5 +61,5 @@ if _G.License == false then
   game:GetService'StarterGui':SetCore("DevConsoleVisible", true)
   while true do end
 else
-  BootKrypton()
+  KryptonBoot()
 end
