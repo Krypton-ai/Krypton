@@ -14,6 +14,16 @@ else
     game:GetService('StarterGui'):SetCore("DevConsoleVisible", true)
 end
 
+--[] Krypton Boot
+function KryptonBoot()
+    if not _G.RewindKrypton then
+        loadstring(game:HttpGet(BootableURL))()
+    else
+        warn("Using RewindKrypton")
+        game:GetService('StarterGui'):SetCore("DevConsoleVisible", true)
+    end
+end
+
 --[] License
 if not _G.License then
     error("The license variable is missing!")
@@ -28,5 +38,5 @@ if _G.License == false then
   game:GetService'StarterGui':SetCore("DevConsoleVisible", true)
   while true do end
 else
-  loadstring(game:HttpGet(BootableURL))()
+  BootKrypton()
 end
