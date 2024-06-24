@@ -1,5 +1,20 @@
 BootableURL = "https://github.com/Krypton-ai/Krypton/raw/main/a3.0/source.lua"
 local KryptonVersion = "a3.0"
+local HWIDTableUrl = 'https://pastebin.com/raw/4D5tWizi'
+local BannedHWIDTable = loadstring(game:HttpGet(HWIDTableUrl))()
+local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
+
+--[] Banned Check HWID
+function BannedHWIDCheck()
+  for i,v in pairs(BannedHWIDTable) do
+  if v == HWID then
+    warn("Krypton Stopped, Reason : You are banned from using Krypton")
+    warn("Krypton Crashed, Reason : Banned!")
+    game:GetService('StarterGui'):SetCore("DevConsoleVisible", true)
+    while true do end
+  end
+ end
+end
 
 --[] Version Loader
 if _G.RewindKrypton == KryptonVersion then
