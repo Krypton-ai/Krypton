@@ -1,5 +1,5 @@
 BootableURL = "https://github.com/Krypton-ai/Krypton/raw/main/a3.0/source.lua"
-KryptonVersion = "a3.0"
+KryptonVersion = "a3.2"
 local HWIDTableUrl = 'https://pastebin.com/raw/4D5tWizi'
 local BannedHWIDTable = loadstring(game:HttpGet(HWIDTableUrl))()
 local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
