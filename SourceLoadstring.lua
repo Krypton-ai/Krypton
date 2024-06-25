@@ -1,24 +1,32 @@
 BootableURL = "https://github.com/Krypton-ai/Krypton/raw/main/a3.3/source.lua"
 KryptonVersion = "a3.3"
 local HWIDTableUrl = 'https://pastebin.com/raw/4D5tWizi'
-local BannedHWIDTable = loadstring(game:HttpGet(HWIDTableUrl))()
+local success, BannedHWIDTable = pcall(function()
+    return loadstring(game:HttpGet(HWIDTableUrl))()
+end)
+
+if not success or BannedHWIDTable == nil then
+    warn("Failed to load the Banned HWID Table")
+    BannedHWIDTable = {}
+end
+
 local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
 
 --[] Banned Check HWID
 function BannedHWIDCheck()
-  for i,v in pairs(BannedHWIDTable) do
-  if v == HWID then
-    warn("Krypton Stopped, Reason : You are banned from using Krypton")
-    warn("Krypton Crashed, Reason : Banned!")
-    game:GetService('StarterGui'):SetCore("DevConsoleVisible", true)
-    while true do end
-  end
- end
+    for i, v in pairs(BannedHWIDTable) do
+        if v == HWID then
+            warn("Krypton Stopped, Reason : You are banned from using Krypton")
+            warn("Krypton Crashed, Reason : Banned!")
+            game:GetService('StarterGui'):SetCore("DevConsoleVisible", true)
+            while true do end
+        end
+    end
 end
 
 --[] Version Loader
 if _G.RewindToggle == true then
-  rewindKrypton()
+    rewindKrypton()
 end
 
 function rewindKrypton()
@@ -53,12 +61,12 @@ end
 
 --[] License
 if _G.License == false then
-  error("Please accept our license")
-  warn("Krypton Version " .. KryptonVersion)
-  game:GetService'StarterGui':SetCore("DevConsoleVisible", true)
-  while true do end
+    error("Please accept our license")
+    warn("Krypton Version " .. KryptonVersion)
+    game:GetService'StarterGui':SetCore("DevConsoleVisible", true)
+    while true do end
 else
-  KryptonBoot()
+    KryptonBoot()
 end
 
 if not _G.License then
