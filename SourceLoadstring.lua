@@ -31,6 +31,8 @@ function rewindKrypton()
         loadstring(game:HttpGet("https://github.com/Krypton-ai/Krypton/raw/main/a2.0/Source.lua"))()
     elseif _G.RewindKrypton == "a3.0" then
         loadstring(game:HttpGet("https://github.com/Krypton-ai/Krypton/raw/main/a3.0/Source.lua"))()
+    elseif _G.RewindKrypton == "a3.2" then
+        loadstring(game:HttpGet("https://github.com/Krypton-ai/Krypton/raw/main/a3.2/source.lua"))()
     else
         warn("Invalid Krypton version")
         game:GetService('StarterGui'):SetCore("DevConsoleVisible", true)
