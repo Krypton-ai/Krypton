@@ -1,5 +1,5 @@
-BootableURL = "https://github.com/Krypton-ai/Krypton/raw/main/a3.0/source.lua"
-KryptonVersion = "a3.2"
+BootableURL = "https://github.com/Krypton-ai/Krypton/raw/main/a3.3/source.lua"
+KryptonVersion = "a3.3"
 local HWIDTableUrl = 'https://pastebin.com/raw/4D5tWizi'
 local BannedHWIDTable = loadstring(game:HttpGet(HWIDTableUrl))()
 local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
@@ -33,6 +33,8 @@ function rewindKrypton()
         loadstring(game:HttpGet("https://github.com/Krypton-ai/Krypton/raw/main/a3.0/Source.lua"))()
     elseif _G.RewindKrypton == "a3.2" then
         loadstring(game:HttpGet("https://github.com/Krypton-ai/Krypton/raw/main/a3.2/source.lua"))()
+    elseif _G.RewindKrypton == "a3.3" then
+        loadstring(game:HttpGet("https://github.com/Krypton-ai/Krypton/raw/main/a3.3/Source.lua"))()
     else
         warn("Invalid Krypton version")
         game:GetService('StarterGui'):SetCore("DevConsoleVisible", true)
