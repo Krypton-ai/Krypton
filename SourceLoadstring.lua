@@ -22,9 +22,9 @@ function rewindKrypton()
 	if _G.RewindKrypton == KryptonVersion then
 		warn("No need to rewind Krypton is already using the latest version")
 		game:GetService('StarterGui'):SetCore("DevConsoleVisible", true)
-	elseif _G.RewindKrypton == "a2.5" then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a2.0/Source.lua"))()
 	elseif _G.RewindKrypton == "a2.0" then
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a2.0/Source.lua"))()
+	elseif _G.RewindKrypton == "a2.5" then
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a2.5/source.lua"))()
 	elseif _G.RewindKrypton == "a3.0" then
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a3.0/Source.lua"))()
