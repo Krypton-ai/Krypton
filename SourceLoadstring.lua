@@ -1,12 +1,5 @@
 LatestBootableURL = "https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a3.3/Source.lua"
 LatestKryptonVersion = "a3.3"
-game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "Krypton!",
-Text = "Script is loading do not execute again", 
-Button1 = "Yes",
-Button2 = "Okay",
-Duration = 30 
-})
 
 function RewindKrypton()
     if _G.RewindKrypton == "a3.3" then
