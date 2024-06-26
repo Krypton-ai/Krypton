@@ -23,13 +23,13 @@ function rewindKrypton()
 		warn("No need to rewind Krypton is already using the latest version")
 		game:GetService('StarterGui'):SetCore("DevConsoleVisible", true)
 	elseif _G.RewindKrypton == "a2.5" then
-		loadstring(game:HttpGet("https://github.com/Krypton-ai/Krypton/raw/main/a2.5/source.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a2.0/Source.lua"))()
 	elseif _G.RewindKrypton == "a2.0" then
-		loadstring(game:HttpGet("https://github.com/Krypton-ai/Krypton/raw/main/a2.0/Source.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a2.5/source.lua"))()
 	elseif _G.RewindKrypton == "a3.0" then
-		loadstring(game:HttpGet("https://github.com/Krypton-ai/Krypton/raw/main/a3.0/Source.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a3.0/Source.lua"))()
 	elseif _G.RewindKrypton == "a3.2" then
-		loadstring(game:HttpGet("https://github.com/Krypton-ai/Krypton/raw/main/a3.2/source.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a3.2/source.lua"))()
 	elseif _G.RewindKrypton == "a3.3" then
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a3.3/Source.lua"))()
 	else
