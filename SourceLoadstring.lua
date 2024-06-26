@@ -61,7 +61,7 @@ if _G.License == false then
 	while true do
 	end
 else
-	getgenv().KryptonBoot
+	getgenv().KryptonBoot()
 end
 
 if not _G.License then
