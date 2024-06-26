@@ -23,12 +23,6 @@ function KryptonBoot()
   end
 end
 
-function LicenseCheck()
-  if _G.License == true then
-    KryptonVersionCheck()
-  end
-end
-
 function KryptonVersionCheck()
   if not _G.KryptonVersionCheck then
     warn("Krypton is missing it's KryptonVersion variable add it back!")
@@ -36,6 +30,12 @@ function KryptonVersionCheck()
     loadstring(game:HttpGet(LatestVersionURL))()
   else
     KryptonBoot()
+  end
+end
+
+function LicenseCheck()
+  if _G.License == true then
+    KryptonVersionCheck()
   end
 end
 
