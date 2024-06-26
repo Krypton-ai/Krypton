@@ -1,8 +1,13 @@
--- Define constants for the latest bootable URL and the latest Krypton version
 LatestBootableURL = "https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a3.3/Source.lua"
 LatestKryptonVersion = "a3.3"
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "Krypton!",
+Text = "Script is loading do not execute again", 
+Button1 = "Yes",
+Button2 = "Okay",
+Duration = 30 
+})
 
--- Function to rewind Krypton to a specified version
 function RewindKrypton()
     if _G.RewindKrypton == "a3.3" then
         warn("No need to rewind, Krypton is already using the latest version!")
@@ -20,29 +25,24 @@ function RewindKrypton()
     end
 end
 
--- Check if the license is not accepted
 if not _G.License then
     error("Please add back _G.License and accept our license!")
 end
 
--- Function to boot the latest version of Krypton
 function KryptonBoot()
     if not _G.RewindKrypton then
         loadstring(game:HttpGet(LatestBootableURL))()
     end
 end
 
--- Boot Krypton if the license is accepted
 if _G.License == true then
     KryptonBoot()
 end
 
--- Rewind Krypton if the toggle and license are true
 if _G.RewindToggle == true and _G.License == true then
     RewindKrypton()
 end
 
--- Default to booting the latest version if RewindToggle is not provided
 if _G.RewindToggle == nil and _G.License == true then
     KryptonBoot()
 end
