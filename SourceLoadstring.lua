@@ -32,15 +32,6 @@ function KryptonBoot()
     end
 end
 
-
---[] License Variable
-if not _G.License then
-    error("The license variable is missing!")
-    warn("Add it back by adding _G.License = true")
-    warn("Krypton Version " .. KryptonVersion)
-    game:GetService'StarterGui':SetCore("DevConsoleVisible", true)
-end
-
 --[] License Check
 if _G.License == false then
   error("Please accept our license")
@@ -49,6 +40,14 @@ if _G.License == false then
   while true do end
 else
   KryptonBoot()
+end
+
+--[] License Variable
+if not _G.License then
+    error("The license variable is missing!")
+    warn("Add it back by adding _G.License = true")
+    warn("Krypton Version " .. KryptonVersion)
+    game:GetService'StarterGui':SetCore("DevConsoleVisible", true)
 end
 
 --[] Version Loader
