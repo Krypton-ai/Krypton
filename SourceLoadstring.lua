@@ -1,4 +1,4 @@
-getgenv().BootableURL = "https://github.com/Krypton-ai/Krypton/raw/main/a3.3/source.lua"
+getgenv().BootableURL = "https://github.com/Krypton-ai/Krypton/raw/main/a3.3/Source.lua"
 KryptonVersion = "a3.3"
 local HWIDTableUrl = 'https://pastebin.com/raw/4D5tWizi'
 local BannedHWIDTable = loadstring(game:HttpGet(HWIDTableUrl))()
