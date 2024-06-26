@@ -44,7 +44,7 @@ if _G.RewindToggle == true then
 end
 
 --[] Krypton Boot
-function KryptonBoot()
+getgenv().KryptonBoot = function KryptonBoot()
 	if not _G.RewindKrypton then
 		loadstring(game:HttpGet(getgenv().BootableURL))()
 	else
@@ -61,7 +61,7 @@ if _G.License == false then
 	while true do
 	end
 else
-	KryptonBoot()
+	getgenv().KryptonBoot
 end
 
 if not _G.License then
