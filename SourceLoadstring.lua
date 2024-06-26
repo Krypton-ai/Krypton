@@ -1,10 +1,9 @@
 LatestVersion = "a3.4"
-LatestVersionURL = "https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a3.4/Source.lua"
 
 function KryptonBoot()
   if _G.KryptonVersion == LatestVersion then
     warn("Using version :" .. _G.KryptonVersion)
-    loadstring(game:HttpGet(LatestVersionURL))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a3.4/Source.lua'))()
   elseif _G.KryptonVersion == "a3.3" then
     warn("Using version :" .. _G.KryptonVersion)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a3.3/Source.lua'))()
@@ -24,10 +23,10 @@ function KryptonBoot()
 end
 
 function KryptonVersionCheck()
-  if not _G.KryptonVersionCheck then
+  if not _G.KryptonVersion then
     warn("Krypton is missing it's KryptonVersion variable add it back!")
     print("defaulting to latest version")
-    loadstring(game:HttpGet(LatestVersionURL))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a3.4/Source.lua'))()
   else
     KryptonBoot()
   end
