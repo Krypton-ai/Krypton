@@ -1,4 +1,4 @@
-BootableURL = "https://github.com/Krypton-ai/Krypton/raw/main/a3.3/source.lua"
+getgenv().BootableURL = "https://github.com/Krypton-ai/Krypton/raw/main/a3.3/source.lua"
 KryptonVersion = "a3.3"
 local HWIDTableUrl = 'https://pastebin.com/raw/4D5tWizi'
 local BannedHWIDTable = loadstring(game:HttpGet(HWIDTableUrl))()
@@ -46,7 +46,7 @@ end
 --[] Krypton Boot
 function KryptonBoot()
 	if not _G.RewindKrypton then
-		loadstring(game:HttpGet(BootableURL))()
+		loadstring(game:HttpGet(getgenv().BootableURL))()
 	else
 		warn("Using RewindKrypton")
 		game:GetService('StarterGui'):SetCore("DevConsoleVisible", true)
