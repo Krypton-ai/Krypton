@@ -1,4 +1,4 @@
-getgenv().BootableURL = "https://github.com/Krypton-ai/Krypton/raw/main/a3.3/Source.lua"
+getgenv().BootableURL = "https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a3.3/Source.lua"
 KryptonVersion = "a3.3"
 local HWIDTableUrl = 'https://pastebin.com/raw/4D5tWizi'
 local BannedHWIDTable = loadstring(game:HttpGet(HWIDTableUrl))()
@@ -31,7 +31,7 @@ function rewindKrypton()
 	elseif _G.RewindKrypton == "a3.2" then
 		loadstring(game:HttpGet("https://github.com/Krypton-ai/Krypton/raw/main/a3.2/source.lua"))()
 	elseif _G.RewindKrypton == "a3.3" then
-		loadstring(game:HttpGet("https://github.com/Krypton-ai/Krypton/raw/main/a3.3/Source.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a3.3/Source.lua"))()
 	else
 		warn("Invalid Krypton version")
 		game:GetService('StarterGui'):SetCore("DevConsoleVisible", true)
