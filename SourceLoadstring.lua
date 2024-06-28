@@ -1,51 +1,12 @@
-print("source")
-LatestVersion = "a3.5"
-LatestVersionURL = "https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a3.5/Bootstrap.lua"
-
-function KryptonBoot()
-  if _G.KryptonVersion == LatestVersion then
-    warn("Using version :" .. _G.KryptonVersion)
-    loadstring(game:HttpGet(LatestVersionURL))()
-  elseif _G.KryptonVersion == "a3.4" then
-    warn("Using version :" .. _G.KryptonVersion)
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a3.4/Source.lua')
-  elseif _G.KryptonVersion == "a3.3" then
-    warn("Using version :" .. _G.KryptonVersion)
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a3.3/Source.lua'))()
-  elseif _G.KryptonVersion == "a3.2" then
-    warn("Using version :" .. _G.KryptonVersion)
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a3.2/source.lua'))()
-  elseif _G.KryptonVersion == "a3.0" then
-    warn("Using version :" .. _G.KryptonVersion)
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a3.0/source.lua'))()
-  elseif _G.KryptonVersion == "a2.5" then
-    warn("Using version :" .. _G.KryptonVersion)
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a2.5/source.lua'))()
-  elseif _G.KryptonVersion == "a2.0" then
-    warn("Using version :" .. _G.KryptonVersion)
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a2.0/Source.lua'))()
-  end
-end
-
-function LicenseCheck()
-  if _G.License == true then
-    KryptonVersionCheck()
-  end
-end
-
-function KryptonVersionCheck()
-  if not _G.KryptonVersionCheck then
-    warn("Krypton is missing it's KryptonVersion variable add it back!")
-    print("defaulting to latest version")
-    loadstring(game:HttpGet(LatestVersionURL))()
-  else
-    KryptonBoot()
-  end
-end
+BootableURL = "https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a3.5/Bootstrap.lua"
+LatestVersion = "a2.5"
 
 if not _G.License then
-  print("Using version : " .. _G.KryptonVersion)
-  warn("Krypton is missing it's license variable add it back!")
-  else
-    LicenseCheck()
+    warn("Krypton current latest version is " .. LatestVersion)
+    warn("Please add _G.License and accept our License!")
+    StarterGui:SetCore("DevConsoleVisible", true)
+else
+    if _G.License == true then
+        loadstring(game:HttpGet(BootableURL))()
+    end
 end
