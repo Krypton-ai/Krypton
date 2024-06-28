@@ -1,3 +1,4 @@
+print("source")
 LatestVersion = "a3.5"
 LatestVersionURL = "https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a3.5/Bootstrap.lua"
 
