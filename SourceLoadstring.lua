@@ -1,5 +1,5 @@
-BootableURL = "https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a3.5/Bootstrap.lua"
-LatestVersion = "a2.5"
+BootableURL = "https://raw.githubusercontent.com/Krypton-ai/Krypton/main/a4.0/Source.lua"
+LatestVersion = "a4.0"
 
 if not _G.License then
     warn("Krypton current latest version is " .. LatestVersion)
